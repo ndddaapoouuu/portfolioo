@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Anamda Silvia</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #ffb6c1, #ff69b4, #ff1493);
+      color: white;
+      min-height: 100vh;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 80px;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    nav h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin-left: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffe4e1;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 80vh;
+      padding: 0 80px;
+      flex-wrap: wrap;
+    }
+
+    .text-box {
+      max-width: 500px;
+      animation: fadeInLeft 1.2s ease-in-out;
+    }
+
+    .text-box h5 {
+      letter-spacing: 2px;
+      color: #ffe4e1;
+    }
+
+    .text-box h1 {
+      font-size: 60px;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .text-box p {
+      margin-top: 10px;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 20px;
+      margin-right: 15px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #ffebf0;
+      transform: scale(1.1);
+    }
+
+    .image-box img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+      animation: fadeIn 2s ease-in-out;
+      object-fit: cover;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .text-box h1 {
+        font-size: 40px;
+      }
+
+      nav {
+        flex-direction: column;
+        padding: 10px 20px;
+      }
+
+      nav ul {
+        margin-top: 10px;
+      }
+
+      nav ul li {
+        margin: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>PORTFOLIO</h1>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Service</a></li>
+      <li><a href="#">Biography</a></li>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="text-box">
+      <h5>UI/UX DESIGNER & WEB DEVELOPER</h5>
+      <h1>ANAMDA<br>SILVIA</h1>
+      <p>
+        Seorang desainer dan pengembang web kreatif yang menyukai dunia digital, warna lembut, dan seni menciptakan pengalaman pengguna yang menyenangkan.
+      </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+    <div class="image-box">
+      <img src="foto-profil.jpg" alt="Foto Anamda Silvia">
+    </div>
+  </div>
+</body>
+</html>
