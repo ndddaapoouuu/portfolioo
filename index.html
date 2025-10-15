@@ -1,1 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Amanda Silvia</title>
+  <style>
+    /* Font Import */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+    /* Reset dasar */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2327, #1a3a3f);
+      color: #e9faf6;
+      overflow-x: hidden;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(15, 35, 39, 0.9);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      color: #00ffc6;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #b8cfcf;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #00ffc6;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 120px 80px;
+    }
+
+    .hero-text {
+      max-width: 600px;
+      opacity: 0;
+      transform: scale(0.95);
+      transition: all 1s ease;
+    }
+
+    .hero-text.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .hero-text h5 {
+      color: #13ffd2;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+
+    .hero-text h1 {
+      font-size: 50px;
+      color: #00ffc6;
+      margin: 10px 0;
+    }
+
+    .hero-text p {
+      color: #b8cfcf;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .social-icons {
+      margin-top: 25px;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      color: #00ffc6;
+      font-size: 20px;
+      margin-right: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #13ffd2;
+      transform: scale(1.2);
+    }
+
+    .hero-image {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #00ffc6 0%, #0f2327 70%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 25px rgba(0, 255, 198, 0.3);
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 1.2s ease;
+    }
+
+    .hero-image.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .hero-image img {
+      width: 85%;
+      border-radius: 50%;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #b8cfcf;
+      background-color: rgba(15, 35, 39, 0.8);
+      backdrop-filter: blur(10px);
+    }
+
+    /* Responsif */
+    @media (max-width: 768px) {
+      header {
+        padding: 20px 40px;
+      }
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 140px 40px;
+      }
+      .hero-image {
+        margin-top: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">PORTFOLIO</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Biography</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h5>UI/UX DESIGNER & WEB DEVELOPER</h5>
+      <h1>AMANDA SILVIA</h1>
+      <p>
+        Desainer UI/UX dan pengembang web yang berfokus pada keindahan visual dan fungsionalitas.  
+        Menciptakan pengalaman digital modern dengan gaya minimalis dan elegan.
+      </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="profile.jpg" alt="Foto Profil">
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Amanda Silvia. All Rights Reserved.
+  </footer>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
+
+  <!-- Animasi Scroll -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.hero-text, .hero-image').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
